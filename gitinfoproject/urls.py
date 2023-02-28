@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('' ,include(('home.urls','home'),namespace='home')),
     path('registration/' ,include(('registration.urls','registration'),namespace='registration')),
+    path('stu_deskboard/' ,include(('stu_deskboard.urls','stu_deskboard'),namespace='stu_deskboard')),
 ]

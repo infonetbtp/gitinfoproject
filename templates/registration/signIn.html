@@ -2,22 +2,31 @@
 
 {% block contents %}
 
-<div class="container py-5 text=align-center">
 
-<h1 class="text-center " style="color: aqua;">SignIn</h1>
-<form method="post">
+{{uname}}
+
+<div class="container">
+    <div class=" card mt-5 " style="width: 45rem;">
+
+<div   class="card-header">login</div>
+<div class="card-body">
+<form  class="form"  role="form" method="post">
     {% csrf_token %}
 
     {{form.as_p}}
         
-              
+      
         
 <button type="submit" class=" btn btn-primary">LogIn</button>
 
 
 </form>
+</div>
+    </div>
+    <p clss="text-center"   > Did not have an account ? <button type="button" name="" id="" class="btn btn-primary" onclick="location.href='{% url 'registration:SignUp' %}' ">Register</button> </p>     
+    </div>
 
-<p clss="text-center"   > Did not have an account ? <button type="button" name="" id="" class="btn btn-primary" onclick="location.href='{% url 'registration:SignUp' %}' ">Register</button> </p>     
+
 </div>
 
 
